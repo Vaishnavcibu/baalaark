@@ -10,7 +10,7 @@ require('dotenv').config()
 let app = express();
 
 //Route file requiring (importing)
-// var userRoute=require("./Routes/userRoute");
+var userRoute=require("./Routes/userRoute");
 // var execomRoute=require("./Routes/execomRoute");
 // var eventRoute=require("./Routes/eventRoute");
 // var contentRoute=require("./Routes/contentRoute");
@@ -38,7 +38,7 @@ var db = mongoose.connection;
 // app.use(express.static('public'));
 
 //Port Declaration
-var port = process.env.PORT || 3201;
+var port = process.env.PORT || 4352;
 
 //Cors and helmet use
 app.use(cors());
@@ -60,7 +60,7 @@ app.use((req, res, next) => {
 
 
 //function usage
-// app.use(userRoute);
+app.use(userRoute);
 // app.use(execomRoute);
 // app.use(eventRoute);
 // app.use(contentRoute);
